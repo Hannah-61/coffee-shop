@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  font-size: 3.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+.full-width--pink {
+  background-color: #FFF0ED;
+}
+.full-width--gray {
+  background-color: #F7F7F7;
+}
+.full-width--white {
+  background-color: #FFF;
+}
+
+.icon {
+  min-width: 2rem;
+  max-width: 4rem;
+}
+
+.dislodged-border {
+  background: #5BACC3;
+  color: #FFF;
+  font-family: sans-serif;
+  padding: 0.5rem;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  height: 3.2rem;
+  width: 10rem;
+}
+.dislodged-border:before {
+  width: 10rem;
+  border: 0.125rem solid #393939;
+  content: "";
+  height: 100%;
+  position: absolute;
+  bottom: 0.4063rem;
+  right: 0.3125rem;
+}
+.dislodged-border:hover {
+  background-color: #23829c;
+  border: 0.125rem solid #393939;
+  padding-top: 0.8rem;
+  transition: all 0.3s ease;
+}
+.dislodged-border:hover:before {
+  display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .icon {
+    min-width: 1rem;
+    max-width: 2.5rem;
+  }
+}
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  background-color: #FFF0ED;
+}
+.nav-menu__logo a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: lowercase;
+  color: #393939;
+  border-radius: 0.1rem;
+}
+.nav-menu__logo a:hover {
+  color: #5BACC3;
+}
+.nav-menu__pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-menu__list {
+  display: flex;
+  flex-direction: row;
+}
+.nav-menu__item {
+  text-transform: uppercase;
+  padding: 1rem;
+}
+.nav-menu__item a {
+  color: #393939;
+  border-radius: 0.1rem;
+  font-size: 1.25rem;
+  padding: 0.1rem;
+}
+.nav-menu__item a:hover {
+  color: #5BACC3;
+}
+.nav-menu__item:last-child a {
+  color: #5BACC3;
+}
+.nav-menu__item:last-child a:hover {
+  color: #393939;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .nav-menu__list {
+    padding-left: 0.3rem;
+  }
+  .nav-menu__item {
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    margin: 0;
+  }
+  .nav-menu__item a {
+    font-size: 0.7rem;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF0ED;
+  padding: 3rem 0;
+}
+.footer__subtitle {
+  padding: 0.6rem 0;
+}
+.footer__days {
+  font-weight: 700;
+}
+.footer__social-pages {
+  display: flex;
+  flex-direction: row;
+}
+.footer__social-pages a {
+  border-radius: 0.3rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+.footer__social-pages a:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.125rem #23829c;
+}
+.footer__social-pages a:hover {
+  background-color: #5BACC3;
+}
+.footer__coffee-banner {
+  display: flex;
+  width: 6.25rem;
+  background-image: url(../assets/logos/coffee-beans-footer.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__coffee-banner--left {
+  position: relative;
+  bottom: 2.5rem;
+}
+.footer__coffee-banner--right {
+  position: relative;
+  left: 0.1rem;
+  top: 2.5rem;
+}
+
+.nav-nitro {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #FFF0ED;
+}
+.nav-nitro__about {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 60%;
+  padding: 1rem;
+}
+.nav-nitro__about * {
+  margin: 0.7rem;
+}
+.nav-nitro__detail {
+  width: 40%;
+}
+.nav-nitro__img {
+  padding: 1.5rem;
+}
+.nav-nitro__img img {
+  min-height: 20rem;
+  max-height: 40rem;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F7F7F7;
+  padding: 2rem;
+}
+.products__title {
+  text-align: center;
+  margin: 1.5rem;
+}
+.products__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.products__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem;
+  width: 25%;
+  border-radius: 0.5rem;
+  background-color: #FFF;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.8274509804), 0 6px 20px 0 rgba(0, 0, 0, 0.1882352941);
+}
+.products__img {
+  padding: 1.5rem;
+}
+.products__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF0ED;
+  padding: 1.5rem;
+  width: 100%;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.products__description {
+  padding: 0 0.2rem;
+}
+.products__subtitle {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.products__qtd {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6c6c6c;
+}
+.products__price {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #5BACC3;
+}
+.products__link {
+  align-self: center;
+  margin: 1.5rem;
+}
+
+.nitro-history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.nitro-history__card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.nitro-history__details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 31.25rem;
+  min-width: 20rem;
+  margin: 1rem;
+}
+.nitro-history__details * {
+  margin: 0.8rem 0;
+}
+.nitro-history__images {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.nitro-history__banner {
+  min-width: 25rem;
+  max-width: 25rem;
+  background-image: url("../assets/images/coldbrewbackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem 0 2rem;
+}
+.nitro-history__banner--border {
+  display: flex;
+  border: 0.3125rem solid #5BACC3;
+  padding: 1.25rem;
+  min-width: 25rem;
+  max-width: 37.5rem;
+  height: 23.75rem;
+  position: relative;
+  right: 0.625rem;
+  bottom: 0.625rem;
+}
+.nitro-history__banner--img {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 28%;
+}
+.nitro-history__banner--img:hover {
+  animation: moveImg 2s infinite;
+}
+
+@keyframes moveImg {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+.discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+}
+.discount__info {
+  padding: 2rem;
+  background-color: #393939;
+  color: #FFF;
+  width: 80%;
+  text-align: center;
+  font-size: 1.875rem;
+  animation: moveBackground 2.5s ease alternate infinite;
+}
+.discount__code {
+  font-weight: 700;
+  text-shadow: 0.0938rem 0.0938rem #5BACC3;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5BACC3;
+  }
+  100% {
+    background-color: #23829c;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .nav-nitro__about {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .nav-nitro__detail {
+    width: 100%;
+  }
+  .nav-nitro-nitro__img img {
+    display: none;
+  }
+  .products__title {
+    font-size: 2.5rem;
+  }
+  .products__list {
+    flex-direction: column;
+  }
+  .products__item {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .nitro-history {
+    margin: 0;
+  }
+  .nitro-history__card {
+    flex-direction: column;
+  }
+  .nitro-history__details {
+    width: 80%;
+    margin: 3rem 0;
+  }
+  .nitro-history__banner {
+    display: none;
+  }
+  .nitro-history__banner--border {
+    display: none;
+  }
+  .discount {
+    padding: 0 1rem 4rem 1rem;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 1.6rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1072px) {
+  .products__list {
+    flex-direction: column;
+  }
+  .products__item {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  .nitro-history {
+    margin: 3rem;
+  }
+  .nitro-history__banner {
+    min-width: 20rem;
+  }
+  .nitro-history__banner--border {
+    min-width: 20rem;
+  }
+}/*# sourceMappingURL=landing.css.map */
